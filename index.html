@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Laboratorio de Cómputo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Laboratorio de Cómputo</h1>
+        <p>Registro de Entradas y Salidas de Usuarios</p>
+    </header>
+
+    <main class="contenedor">
+        <!-- Sección del formulario de entrada -->
+        <section class="panel-formulario">
+            <h2>Registrar Entrada</h2>
+            <form id="formRegistro">
+                <div class="campo">
+                    <label for="matricula">Matrícula / ID:</label>
+                    <input type="text" id="matricula" placeholder="Ej. 20240158" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Ana López" required>
+                </div>
+
+                <div class="campo">
+                    <label for="carrera">Carrera / Grupo:</label>
+                    <input type="text" id="carrera" placeholder="Ej. Ingeniería en Sistemas - 3A" required>
+                </div>
+
+                <div class="campo">
+                    <label for="equipo">Equipo asignado:</label>
+                    <select id="equipo" required>
+                        <option value="">Selecciona una PC...</option>
+                        <option value="PC-01">PC-01</option>
+                        <option value="PC-02">PC-02</option>
+                        <option value="PC-03">PC-03</option>
+                        <option value="PC-04">PC-04</option>
+                        <option value="PC-05">PC-05</option>
+                        <option value="PC-06">PC-06</option>
+                        <option value="PC-07">PC-07</option>
+                        <option value="PC-08">PC-08</option>
+                        <option value="PC-09">PC-09</option>
+                        <option value="PC-10">PC-10</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-registrar">Registrar Entrada</button>
+            </form>
+        </section>
+
+        <!-- Sección de la tabla de registros -->
+        <section class="panel-tabla">
+            <div class="cabecera-tabla">
+                <h2>Bitácora del Día</h2>
+                <span id="contadorActivos">Usuarios activos: 0</span>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nombre</th>
+                        <th>Grupo</th>
+                        <th>Equipo</th>
+                        <th>Hora Entrada</th>
+                        <th>Hora Salida</th>
+                        <th>Estado / Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios">
+                    <!-- Aquí se agregan las filas dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema de Control Interno - Unidad 3 HTML</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
